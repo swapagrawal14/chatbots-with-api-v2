@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-900: #0a0a0f;
+  --color-dark-800: #111118;
+  --color-dark-700: #1a1a24;
+  --color-dark-600: #242430;
+  --color-dark-500: #2e2e3c;
+  --color-dark-400: #3a3a4c;
+  --color-dark-300: #52526a;
+  --color-dark-200: #7a7a94;
+  --color-dark-100: #a0a0b8;
+
+  --color-accent-500: #6c5ce7;
+  --color-accent-400: #8577ed;
+  --color-accent-300: #a29bf3;
+  --color-accent-600: #5a4bd4;
+  --color-accent-700: #4a3bc4;
+
+  --color-emerald-glow: #10b981;
+  --color-cyan-glow: #06b6d4;
+}
+
+html, body { height: 100%; overflow: hidden; }
+body { overscroll-behavior: none; }
+button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+
+* { scrollbar-width: thin; scrollbar-color: var(--color-dark-500) transparent; }
+*::-webkit-scrollbar { width: 5px; height: 5px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background-color: var(--color-dark-500); border-radius: 3px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(108, 92, 231, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(108, 92, 231, 0.6); }
+}
+@keyframes typing-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+@keyframes think-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.animate-fade-in { animation: fadeIn 0.2s ease-out forwards; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.typing-dot:nth-child(1) { animation: typing-dot 1.4s ease-in-out infinite 0s; }
+.typing-dot:nth-child(2) { animation: typing-dot 1.4s ease-in-out infinite 0.2s; }
+.typing-dot:nth-child(3) { animation: typing-dot 1.4s ease-in-out infinite 0.4s; }
+.animate-think { animation: think-pulse 1.5s ease-in-out infinite; }
+
+/* Markdown */
+.prose-chat { line-height: 1.7; }
+.prose-chat p { margin-bottom: 0.6rem; }
+.prose-chat p:last-child { margin-bottom: 0; }
+.prose-chat pre {
+  background-color: var(--color-dark-900);
+  border: 1px solid var(--color-dark-500);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+  font-size: 0.8rem;
+  position: relative;
+}
+.prose-chat code {
+  background-color: var(--color-dark-600);
+  padding: 0.12rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.85em;
+}
+.prose-chat pre code { background: none; padding: 0; border-radius: 0; font-size: inherit; }
+.prose-chat ul, .prose-chat ol { margin: 0.5rem 0; padding-left: 1.5rem; }
+.prose-chat li { margin-bottom: 0.2rem; }
+.prose-chat h1, .prose-chat h2, .prose-chat h3 { font-weight: 600; margin-top: 1rem; margin-bottom: 0.4rem; }
+.prose-chat h1 { font-size: 1.2rem; }
+.prose-chat h2 { font-size: 1.1rem; }
+.prose-chat h3 { font-size: 1rem; }
+.prose-chat blockquote {
+  border-left: 3px solid var(--color-accent-500);
+  padding-left: 0.75rem;
+  margin: 0.6rem 0;
+  color: var(--color-dark-100);
+}
+.prose-chat table { border-collapse: collapse; width: 100%; margin: 0.6rem 0; font-size: 0.85rem; }
+.prose-chat th, .prose-chat td { border: 1px solid var(--color-dark-500); padding: 0.4rem 0.6rem; text-align: left; }
+.prose-chat th { background-color: var(--color-dark-600); font-weight: 600; }
+.prose-chat a { color: var(--color-accent-400); text-decoration: underline; }
+.prose-chat hr { border-color: var(--color-dark-500); margin: 0.75rem 0; }
+
+/* Thinking block */
+.thinking-block {
+  background: var(--color-dark-700);
+  border-left: 3px solid var(--color-cyan-glow);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--color-dark-200);
+}
+
+.line-clamp-1 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; }
+.line-clamp-2 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.overscroll-contain { overscroll-behavior: contain; }
