@@ -1,6 +1,10 @@
 # ⚡ NexChat AI — Free Multi-Model Chatbot
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-2ea44f?style=for-the-badge)](https://chatbots-with-api-v2.vercel.app)
+
 A stunning, production-ready chatbot web application with **file/image uploads**, **real-time web search**, and support for 20+ free AI models including OpenRouter's latest **Owl Alpha** and **Nex-N2 Pro**.
+
+**[🚀 Try it live → https://chatbots-with-api-v2.vercel.app](https://chatbots-with-api-v2.vercel.app)**
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=for-the-badge&logo=typescript)
@@ -42,6 +46,10 @@ A stunning, production-ready chatbot web application with **file/image uploads**
 ---
 
 ## 🚀 Quick Start
+
+### 🌐 Try It Live — No Setup Needed!
+
+**[https://chatbots-with-api-v2.vercel.app](https://chatbots-with-api-v2.vercel.app)** — Just open, add your free API keys, and start chatting!
 
 ### 1. Get Free API Keys
 
